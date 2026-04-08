@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foods</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .flex-container {
+            display: flex;
+            gap: 5px;
+            padding: 5px;
+            justify-content: space-evenly;
+            /* align-content: space-between;
+            grid-template-columns: repeat(4,300px); */
+            flex-flow: row wrap;
+            height: 100vh;
+            
+        }
+
+        .item {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            border: 1px solid gainsboro;
+            color: white;
+            text-align: center;
+        }
+
+        .item:nth-child(even) {
+            height: 300px;
+        }
+
+        .item:hover {
+            transform: scale(0.9);
+            cursor: pointer;
+        }
+
+        .item-1 {
+            background-image: url(https://i.pinimg.com/1200x/b1/61/26/b16126b63e2efa0dfc10be46bfaea99b.jpg);
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .item-2 {
+            background-image: url(https://i.pinimg.com/736x/eb/cb/c6/ebcbc6aaa9deca9d6efc1efc93b66945.jpg);
+            background-size: cover;
+            background-position: center;
+
+
+        }
+
+        .item-3 {
+            background-image: url(https://i.pinimg.com/736x/a6/83/47/a68347315e1e13399234c1957982237f.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .item-4 {
+            background-image: url(https://i.pinimg.com/736x/39/a6/28/39a628b16a3841487462b952256480b7.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .item-5 {
+            background-image: url(https://i.pinimg.com/1200x/3f/26/16/3f2616a1be606104fd1e73303e20a9a5.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .item-6 {
+            background-image: url(https://i.pinimg.com/736x/57/30/4d/57304de8c4e39fe76ff83cbb804e9950.jpg);
+            background-size: cover;
+            background-position: center;
+
+        }
+        /* Small phones */
+        @media (max-width: 480px) {}
+
+        /* Tablets */
+        @media (min-width: 481px) and (max-width: 768px) {}
+
+        /* Small laptops */
+        @media (min-width: 769px) and (max-width: 1024px) {}
+
+        /* Desktops */
+        @media (min-width: 1025px) and (max-width: 1200px) {}
+
+        /* Large screens */
+        @media (min-width: 1201px) {}
+    </style>
+</head>
+<body style="background-color: grey;">
+    <div class="container" >
+        <!-- lightmode -->
+        <button class="border p-2 rounded-2xl after:content-['🌞'] cursor-pointer " onclick="LightModeAction()" style="background-color: aliceblue;">
+            Light Mode
+        </button>
+
+        <!-- darkmode -->
+        <button class="border p-2 rounded-2xl after:content-['🌚'] cursor-pointer" onclick="DarkModeAction()" style="background-color:slategrey;">
+            Dark Mode
+        </button>
+    </div>
+    <div
+        class="bg-gray-300 dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5 text-gray-600 dark:text-white">
+        <ul class="flex flex-wrap text-sm font-medium text-center text-body border-b border-default">
+            <li class="me-2">
+                <a href="./index.html"
+                    class="inline-block p-4 rounded-t-base hover:text-heading hover:bg-neutral-secondary-soft">Home</a>
+            </li>
+            <li class="me-2">
+                <a href="/food.html" aria-current="page"
+                    class="inline-block p-4 text-fg-brand bg-neutral-secondary-soft rounded-t-base active">Foods</a>
+            </li>
+            <li class="me-2">
+                <a href="#"
+                    class="inline-block p-4 rounded-t-base hover:text-heading hover:bg-neutral-secondary-soft">FastFoods</a>
+            </li>
+            <li class="me-2">
+                <a href="./drink.html"
+                    class="inline-block p-4 rounded-t-base hover:text-heading hover:bg-neutral-secondary-soft">Drinks</a>
+            </li>
+            <li class="me-2">
+                <a href="#"
+                    class="inline-block p-4 rounded-t-base hover:text-heading hover:bg-neutral-secondary-soft">Dessert</a>
+            </li>
+            <li>
+                <a class="inline-block p-4 text-fg-disabled rounded-t-base cursor-not-allowed">Coming soon</a>
+            </li>
+        </ul>
+    </div>
+    <div class="border p-2 rounded-2xl bg-gray-300 dark:bg-gray-800  px-6 py-8 ring shadow-xl ring-gray-900/5 text-gray-600 dark:text-white">
+        <div class="bg-gray-300 dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5 text-gray-600 dark:text-white" >
+        <marquee class="text-6xl font-extrabold text-amber-700" behavior="" direction="">LA3's Foods
+            </marquee>
+        <div class="flex-container" style="display: flex;justify-content: space-evenly;">
+            
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+            <div class="item item-5"></div>
+            <div class="item item-6"></div>
+        </div>
+        <div class="flex-container" style="display: flex;justify-content: space-evenly;">
+            
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+            <div class="item item-5"></div>
+            <div class="item item-6"></div>
+        </div>
+        <div class="flex-container" style="display: flex;justify-content: space-evenly;">
+            
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+            <div class="item item-5"></div>
+            <div class="item item-6"></div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches),
+    );
+
+    // function for darkmode
+    function DarkModeAction() {
+        window.location.reload();
+        document.documentElement.classList.add = "dark";
+        localStorage.theme = "dark";
+    }
+
+    // function for lightmode
+    function LightModeAction() {
+        window.location.reload();
+        document.documentElement.classList.remove = "dark";
+        localStorage.theme = "light";
+    }
+
+</script>
+</html>
